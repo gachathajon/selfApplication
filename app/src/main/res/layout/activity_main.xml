@@ -4,66 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardView"
-        android:layout_width="323dp"
-        android:layout_height="240dp"
-
-        android:layout_marginBottom="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/border_radius"
         android:backgroundTint="#FFF5D9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent">
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/reg_no"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox "
-            android:layout_width="307dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="8dp"
-            android:paddingStart="10dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.457"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.181">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="290dp"
-                android:layout_height="50dp"
-                android:drawableStart="@drawable/ic_user"
-                android:drawablePadding="10sp"
-                android:hint="Reg No"
-                android:maxLength="15"
-                android:maxLines="1"
-                android:paddingTop="8dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/toogle"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox "
-            android:layout_width="307dp"
-            android:layout_height="62dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:paddingStart="10dp"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="290dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="4dp"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10sp"
+                android:ems="10"
+                android:hint="Usikonde"
+                android:inputType="text"
+                android:maxLength="15"
+                android:padding="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_no"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/toogle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="4dp"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="10sp"
@@ -76,30 +78,30 @@
 
         <TextView
             android:id="@+id/reset_btn"
-            android:layout_width="102dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/border_radius_layout"
             android:fontFamily="@font/muli"
-            android:paddingTop="6dp"
+            android:padding="10dp"
             android:text="Reset Password"
-            android:textAlignment="center"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <Button
             android:id="@+id/login_btn"
-            android:layout_width="295dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
             android:text="LOG IN"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/reset_btn"
             app:layout_constraintVertical_bias="1.0" />
 
 
@@ -107,14 +109,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="156dp"
-        android:layout_height="166dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintVertical_bias="0.322"
         app:srcCompat="@drawable/download" />
 
 
