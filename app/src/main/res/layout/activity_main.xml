@@ -41,7 +41,7 @@
                 android:drawableStart="@drawable/ic_user"
                 android:drawablePadding="10sp"
                 android:ems="10"
-                android:hint="Usikonde"
+                android:hint="Reg No"
                 android:inputType="text"
                 android:maxLength="15"
                 android:padding="15dp" />
